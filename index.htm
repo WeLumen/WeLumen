@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We Lúmen | Agência de Marketing Digital</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <img src="src/img/logof.png" alt="We Lúmen" />
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Projetos</a>
+        <a href="#">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="slides">
+        <div
+          class="slide active"
+          style="background-image: url(&quot;src/img/hero-bg.avif&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;src/img/hero-bg2.png&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;src/img/hero-bg3.png&quot;)"
+        ></div>
+      </div>
+
+      <!-- INDICADORES + NAVEGAÇÃO -->
+      <div class="carousel-ui">
+        <!-- DOTS -->
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+
+        <!-- PREV / NEXT -->
+        <div class="carousel-nav">
+          <button id="prev">← PREV</button>
+          <button id="next">NEXT →</button>
+        </div>
+      </div>
+
+      <!-- SHAPES -->
+      <div class="shape one"></div>
+      <div class="shape two"></div>
+
+      <!-- TEXTO -->
+      <div class="hero-content">
+        <span>Bem-vindo à nossa agência</span>
+        <h1>
+          Iluminamos marcas<br />
+          para se destacarem no digital
+        </h1>
+        <a href="#">Solicitar orçamento</a>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="services-top">
+        <div class="services-title">
+          <span class="label">nossos serviços</span>
+          <span class="line"></span>
+          <h2>O que a We Lúmen<br />oferece</h2>
+        </div>
+
+        <div class="services-text">
+          <p>
+            Soluções completas para marcas que desejam construir presença,
+            identidade e resultados no digital — do conceito à execução.
+          </p>
+        </div>
+      </div>
+
+      <div class="services-list">
+        <div class="service-item">
+          <div class="icon-box">
+            <!-- ÍCONE WEB -->
+            <img src="src/img/web.png" alt="icone de um computador e celular" />
+          </div>
+          <span class="number">01</span>
+          <h3>
+            Web<br />
+            Lúmen
+          </h3>
+          <p class="service-desc">Desenvolvimento Web</p>
+
+          <span class="arrow">→</span>
+        </div>
+
+        <div class="service-item">
+          <div class="icon-box">
+            <!-- ÍCONE IDENTITY -->
+            <img src="src/img/identy.png" alt="icone de identidade visual" />
+          </div>
+          <span class="number">02</span>
+          <h3>Identity Lúmen<br /></h3>
+          <p class="service-desc">Criação de Marca & Identidade Visual.</p>
+          <span class="arrow">→</span>
+        </div>
+
+        <div class="service-item">
+          <div class="icon-box">
+            <!-- ÍCONE EDITION -->
+            <img src="src/img/marketing.png" alt="icone de marketing digital" />
+          </div>
+          <span class="number">03</span>
+          <h3>Edition Lúmen</h3>
+          <p class="service-desc">Gestão de Mídias Sociais & Conteúdo.</p>
+          <span class="arrow">→</span>
+        </div>
+
+        <div class="service-item">
+          <div class="icon-box">
+            <!-- ÍCONE MOTION -->
+            <img
+              src="src/img/edicao-de-video.png"
+              alt="icone de edição de vídeo"
+            />
+          </div>
+          <span class="number">04</span>
+          <h3>Motion Lúmen</h3>
+          <p class="service-desc">Edição de Vídeo & Reels.</p>
+          <span class="arrow">→</span>
+        </div>
+
+        <div class="service-item">
+          <div class="icon-box">
+            <!-- ÍCONE ÁLBUM -->
+            <img src="src/img/album-de-foto.png" alt="" />
+          </div>
+          <span class="number">05</span>
+          <h3>Álbum Lúmen</h3>
+          <p class="service-desc">Diagramação de Álbuns.</p>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </section>
+    <section class="services-cta">
+      <div class="services-cta-line"></div>
+
+      <div class="services-cta-content">
+        <p>
+          soluções criadas especialmente para a sua marca.
+          <a href="#contato">encontre sua solução</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="about-alt">
+      <div class="about-alt-container">
+        <!-- COLUNA IMAGENS -->
+        <div class="about-alt-images">
+          <img
+            src="src/img/equipe.png"
+            alt="We Lúmen - Estratégia e criação"
+            class="img-large"
+          />
+          <img
+            src="src/img/equipe2.jpg"
+            alt="We Lúmen - Bastidores"
+            class="img-small"
+          />
+          <span class="image-line"></span>
+        </div>
+
+        <!-- COLUNA TEXTO -->
+        <div class="about-alt-content">
+          <span class="about-label">conheça a we lúmen</span>
+          <span class="line"></span>
+
+          <h2>
+            Criatividade, estratégia e direção<br />
+            para marcas que querem crescer
+          </h2>
+
+          <p class="text">
+            A We Lúmen é uma agência criativa que une estratégia, design e
+            tecnologia para construir marcas fortes e bem posicionadas no
+            digital, com soluções pensadas de forma personalizada.
+          </p>
+
+          <!-- BLOCO DE DESTAQUE -->
+          <div class="about-highlight">
+            <div class="highlight-icon">
+              <img src="src/img/strategy.png" alt="We Lúmen - Destaque" />
+            </div>
+            <p>
+              Uma visão integrada que conecta branding, conteúdo,
+              desenvolvimento web e estratégia em um único processo.
+            </p>
+          </div>
+
+          <hr />
+
+          <!-- LISTA -->
+          <ul class="about-list">
+            <li>Identidade clara e profissional</li>
+            <li>Presença digital estratégica</li>
+            <li>Conteúdo com propósito</li>
+            <li>Soluções pensadas para crescer junto com sua marca</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <!-- TOPO -->
+      <div class="portfolio-header">
+        <span class="portfolio-label">projetos recentes</span>
+        <span class="portfolio-line"></span>
+        <h2>Vitrine de Trabalhos</h2>
+
+        <ul class="portfolio-filter">
+          <li class="active" data-filter="all">todos</li>
+          <li data-filter="web">web lúmen</li>
+          <li data-filter="identity">identity lúmen</li>
+          <li data-filter="edition">edition lúmen</li>
+          <li data-filter="motion">motion lúmen</li>
+          <li data-filter="album">álbum lúmen</li>
+        </ul>
+      </div>
+
+      <!-- GRID -->
+      <div class="portfolio-grid">
+        <!-- ITEM GRANDE -->
+
+        <!-- ITEM NORMAL -->
+        <div class="portfolio-item large" data-category="web">
+          <img src="src/img/portfolio1.png" alt="Imagem de um projeto web" />
+          <div class="portfolio-overlay">
+            <span>web lúmen</span>
+            <h3>Projeto Digital</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="edition">
+          <img
+            src="src/img/portfolio3.png"
+            alt="Imagem de conteúdo estratégico"
+          />
+          <div class="portfolio-overlay">
+            <span>edition lúmen</span>
+            <h3>Conteúdo Estratégico</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="motion">
+          <img src="src/img/portfolio4.png" alt="Imagem de um vídeo criativo" />
+          <div class="portfolio-overlay">
+            <span>motion lúmen</span>
+            <h3>Vídeo Criativo</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="identity">
+          <img
+            src="src/img/portfolio2.png"
+            alt="Imagem de uma identidade visual"
+          />
+          <div class="portfolio-overlay">
+            <span>identity lúmen</span>
+            <h3>Identidade Visual</h3>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="album">
+          <img src="src/img/portfolio5.png" alt="Imagem de um album" />
+          <div class="portfolio-overlay">
+            <span>álbum lúmen</span>
+            <h3>Diagramação Álbum</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-about">
+      <!-- BARRA DE NÚMEROS -->
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <img src="src/img/favicon.png" alt="We Lúmen" />
+          </div>
+          <strong>+50</strong>
+          <span>projetos entregues</span>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">
+            <img src="src/img/favicon.png" alt="We Lúmen" />
+          </div>
+          <strong>100%</strong>
+          <span>clientes satisfeitos</span>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">
+            <img src="src/img/favicon.png" alt="We Lúmen" />
+          </div>
+          <strong>5</strong>
+          <span>serviços integrados</span>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">
+            <img src="src/img/favicon.png" alt="We Lúmen" />
+          </div>
+          <strong>alto</strong>
+          <span>nível de recompra</span>
+        </div>
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="stats-content">
+        <!-- IMAGEM -->
+        <div class="stats-image">
+          <img src="src/img/equipe3.png" alt="We Lúmen em ação" />
+        </div>
+
+        <!-- TEXTO -->
+        <div class="stats-text">
+          <span class="stats-label">benefícios we lúmen</span>
+          <span class="stats-line"></span>
+
+          <h2>
+            Por que escolher<br />
+            a We Lúmen
+          </h2>
+
+          <p>
+            A We Lúmen atua de forma estratégica e personalizada, conectando
+            branding, conteúdo, web e direção visual para construir marcas
+            sólidas e bem posicionadas no digital.
+          </p>
+
+          <ul class="stats-list">
+            <li>Direção criativa próxima e estratégica</li>
+            <li>Projetos pensados do conceito à execução</li>
+            <li>Identidade visual alinhada ao posicionamento</li>
+            <li>Soluções que acompanham o crescimento da marca</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  <section class="team">
+
+  <div class="team-header">
+    <span class="team-label">nossos parceiros</span>
+    <span class="team-line"></span>
+    <h2>Conheça pessoas especializadas</h2>
+  </div>
+
+  <!-- GRID -->
+  <div class="team-grid">
+
+    <!-- CARD 1 -->
+    <div class="team-card">
+
+      <div class="team-image">
+        <img src="src/img/kathllyn.jpg" alt="Kathllyn Santos">
+
+        <!-- BARRA QUE SOBE ATÉ METADE -->
+        <div class="team-overlay">
+
+          <div class="team-info">
+            <h3>Kathllyn Santos</h3>
+            <span>Fundadora & Diretora Criativa</span>
+          </div>
+
+          <div class="team-socials">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- INFO VISÍVEL -->
+      <div class="team-info static">
+        <h3>Kathllyn Santos</h3>
+        <span>Fundadora & Diretora Criativa</span>
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="team-card">
+      <div class="team-image">
+        <img src="src/img/kathllyn.jpg" alt="Kathllyn Santos">
+
+        <div class="team-overlay">
+          <div class="team-info">
+            <h3>Kathllyn Santos</h3>
+            <span>Fundadora & Diretora Criativa</span>
+          </div>
+
+          <div class="team-socials">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-info static">
+        <h3>Kathllyn Santos</h3>
+        <span>Fundadora & Diretora Criativa</span>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="team-card">
+      <div class="team-image">
+        <img src="src/img/kathllyn.jpg" alt="Kathllyn Santos">
+
+        <div class="team-overlay">
+          <div class="team-info">
+            <h3>Kathllyn Santos</h3>
+            <span>Fundadora & Diretora Criativa</span>
+          </div>
+
+          <div class="team-socials">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-info static">
+        <h3>Kathllyn Santos</h3>
+        <span>Fundadora & Diretora Criativa</span>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="team-card">
+      <div class="team-image">
+        <img src="src/img/kathllyn.jpg" alt="Kathllyn Santos">
+
+        <div class="team-overlay">
+          <div class="team-info">
+            <h3>Kathllyn Santos</h3>
+            <span>Fundadora & Diretora Criativa</span>
+          </div>
+
+          <div class="team-socials">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-info static">
+        <h3>Kathllyn Santos</h3>
+        <span>Fundadora & Diretora Criativa</span>
+      </div>
+    </div>
+
+  </div><!-- /team-grid -->
+
+</section>
+
+<section class="testimonials">
+
+  <div class="testimonials-container">
+
+    <!-- COLUNA ESQUERDA -->
+    <div class="testimonials-header">
+      <span class="testimonials-label">feedbacks clientes</span>
+      <span class="testimonials-line"></span>
+
+      <h2>
+        O que estão<br>
+        falando da<br>
+        We Lúmen?
+      </h2>
+
+      <div class="testimonials-nav">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+    </div>
+
+    <!-- CARROSSEL -->
+    <div class="testimonials-slider">
+      <div class="testimonials-track">
+
+        <!-- CARD 1 -->
+        <div class="testimonial-card">
+          <p>
+            A We Lúmen conseguiu traduzir exatamente o que eu queria para
+            minha marca. O resultado foi estratégico e profissional.
+          </p>
+
+          <div class="testimonial-user">
+            <img src="src/img/user1.jpg" alt="">
+            <div>
+              <strong>Cliente We Lúmen</strong>
+              <span>empreendedora</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="testimonial-card">
+          <p>
+            Desde o branding até o conteúdo, tudo foi pensado com cuidado.
+            Hoje minha marca se posiciona melhor no digital.
+          </p>
+
+          <div class="testimonial-user">
+            <img src="src/img/user2.jpg" alt="">
+            <div>
+              <strong>Cliente We Lúmen</strong>
+              <span>negócio local</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="testimonial-card">
+          <p>
+            Atendimento próximo, direção criativa clara e soluções que
+            realmente fazem sentido para o crescimento da marca.
+          </p>
+
+          <div class="testimonial-user">
+            <img src="src/img/user3.jpg" alt="">
+            <div>
+              <strong>Cliente We Lúmen</strong>
+              <span>marca pessoal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
