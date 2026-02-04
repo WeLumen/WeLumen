@@ -144,3 +144,18 @@ if (nextTestimonial && prevTestimonial) {
 if (testimonialTrack && testimonialCards.length > 1) {
   startTestimonialInterval();
 }
+/* =========================
+   CTA PARALLAX SCROLL
+========================= */
+const cta = document.querySelector('.cta-lumen');
+
+window.addEventListener('scroll', () => {
+  if (!cta) return;
+
+  const rect = cta.getBoundingClientRect();
+  const scrollProgress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+
+  const move = Math.max(-30, Math.min(30, scrollProgress * 60 - 30));
+
+  cta.style.backgroundPosition = `center ${50 + move}%`;
+});
