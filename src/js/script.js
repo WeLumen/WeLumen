@@ -58,6 +58,53 @@ dots.forEach(dot => {
   };
 });
 
+/* =========================
+   MOBILE MENU
+========================= */
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.getElementById('siteNav');
+const navBackdrop = document.querySelector('.nav-backdrop');
+
+function openNav(){
+  document.body.classList.add('nav-open');
+  if (navToggle) {
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Fechar menu');
+  }
+}
+
+function closeNav(){
+  document.body.classList.remove('nav-open');
+  if (navToggle) {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Abrir menu');
+  }
+}
+
+if (navToggle && siteNav) {
+  navToggle.addEventListener('click', () => {
+    if (document.body.classList.contains('nav-open')) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  });
+
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
+}
+
+if (navBackdrop) {
+  navBackdrop.addEventListener('click', closeNav);
+}
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeNav();
+  }
+});
+
 
 /* =========================
    PORTFOLIO FILTER
@@ -159,3 +206,26 @@ window.addEventListener('scroll', () => {
 
   cta.style.backgroundPosition = `center ${50 + move}%`;
 });
+
+/* =========================
+   BACK TO TOP
+========================= */
+const backToTop = document.querySelector('.back-to-top');
+
+function toggleBackToTop(){
+  if (!backToTop) return;
+  if (window.scrollY > 400) {
+    backToTop.classList.add('show');
+  } else {
+    backToTop.classList.remove('show');
+  }
+}
+
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+window.addEventListener('scroll', toggleBackToTop);
+toggleBackToTop();

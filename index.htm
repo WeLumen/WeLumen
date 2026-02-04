@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>We Lúmen | Agência de Marketing Digital</title>
+    <meta
+      name="description"
+      content="We Lúmen é uma agência de marketing digital focada em branding, identidade visual, web, social media e conteúdo para marcas que querem se destacar no digital."
+    />
+    <meta
+      name="keywords"
+      content="agência de marketing digital, branding, identidade visual, criação de marca, desenvolvimento web, social media, gestão de redes sociais, conteúdo digital, design gráfico, We Lúmen"
+    />
+    <meta name="author" content="We Lúmen" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +36,7 @@
       <div class="logo">
         <img src="src/img/logof.png" alt="We Lúmen" />
       </div>
-      <nav>
+      <nav class="site-nav" id="siteNav">
         <a href="#home">Home</a>
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
@@ -36,7 +45,13 @@
         <a href="#equipe">Equipe</a>
         <a href="#contato">Contato</a>
       </nav>
+      <button class="nav-toggle" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
+    <div class="nav-backdrop" aria-hidden="true"></div>
 
     <section class="hero" id="home">
       <div class="slides">
@@ -567,6 +582,10 @@
         </div>
       </div>
     </section>
+
+    <button class="back-to-top" type="button" aria-label="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <section class="cta-lumen section-anchor" id="contato">
 
