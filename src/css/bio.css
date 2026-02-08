@@ -1,0 +1,502 @@
+/* Importa uma fonte elegante */
+@import url('https://fonts.googleapis.com/css2?family:Playfair+Display:wght@400;500;600&display=swap');
+
+/* Variáveis de Cores (Cores aproximadas da imagem) */
+:root {
+    --cor-azul-escura: #020e14; /* Usado no background da Faixa 1 */
+    --cor-cinza-clara: #c1c1c1;  /* Usado no background da Faixa 3 */
+    --cor-texto-claro: #f5f5f5;
+    --cor-texto-escuro: #020e14;
+    --cor-fundo-claro: #efebe5; /* Cor de fundo da página */
+    --cor-cinza-lancement:  #efebe5 ; /* Cor de fundo marrom escura do banner 4 */}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f5f3f0;
+    color: #fff;
+}
+
+/* Seção principal */
+.hero {
+    position: relative;
+    height: 150vh;
+    background: url('/src/img/lumen-bg.png') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinha no topo para poder controlar o espaçamento */
+    padding-top: 15vh; /* Ajuste para "empurrar" o conteúdo para baixo */
+}
+
+/* Camada sutil para contraste do texto */
+.overlay {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem; /* Mantém espaçamento com os ícones */
+}
+
+.overlay h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+}
+
+.overlay h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.icons {
+    margin-top: 2rem; /* Ajuste para espaçar ainda mais se necessário */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+
+.icons img:hover {
+    opacity: 1;
+}
+
+/* Base e Layout Geral */
+.banner {
+    display: flex;
+    width: 100%; 
+    height: 300px; /* Altura fixa dos banners */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  color: inherit;
+}
+
+
+.image-area,
+.content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos de Tipografia */
+.title-main {
+    font-family: 'Times New Roman', serif; /* Simula a fonte elegante do topo */
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.title-sub {
+    font-family: 'Times New Roman', serif; /* Simula a fonte elegante */
+    font-size: 5.5em;
+    font-weight: 400;
+    
+    line-height: 0.9;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.description {
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.description-small {
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.banners-container {
+    width: 100%; /* Ocupa 100% da largura do elemento pai (que geralmente é o body/viewport) */
+    max-width: 100vw; /* Garante que não ultrapasse a largura do viewport */
+    
+    margin: 40px auto; /* Centraliza horizontalmente e adiciona margem acima/abaixo */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaçamento entre os banners */
+    padding: 0 20px; /* Garante o espaçamento de 20px nas laterais (borda) */
+}
+
+/* --- Configuração das Faixas (Banners) --- */
+
+/* Faixa 1: Édition Mensuelle */
+.banner-1 {
+    color: var(--cor-texto-claro);
+}
+
+.banner-1 .image-area-left {
+    flex: 1; /* 60% da largura para a imagem */
+    background-color: #bebebe; /* Cor placeholder da imagem */
+    background: url('/src/img/web1.png') no-repeat; /* Removi center center / cover */
+    
+    /* ************************************************************* */
+    /* A CHAVE PARA NÃO CORTAR AS CABEÇAS: PRIORIZA O TOPO DA IMAGEM */
+    background-size: cover;        /* Garante que a imagem cubra toda a área */
+    background-position: top center; /* <--- MUDANÇA AQUI: Alinha o topo e centraliza horizontalmente */
+    /* ************************************************************* */
+}
+
+.banner-1 .content-area-right {
+    flex: 1.3; /* 40% da largura para o conteúdo */
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+/* Degrade da Faixa 1 - Fundo Marrom Escuro */
+.gradient-dark {
+    background: var(--cor-marrom-escura); /* Cor de fallback */
+    background: linear-gradient(to right, #a1a1a1 1%, var(--cor-azul-escura) 40%);
+}
+
+/* Faixa 2*/
+.banner-2 {
+    color: var(--cor-texto-escuro);
+}
+
+.banner-2 .content-area-left {
+    flex: 1;
+    align-items: flex-start;
+    padding-left: 40px;
+    background-color: var(--cor-fundo-claro); /* Fundo claro para o texto */
+}
+
+.banner-2 .title-main {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.banner-2 .title-sub {
+    font-size: 5.5em;
+    font-weight: 400;
+    margin-top: -10px; /* Ajuste para o espaçamento vertical */
+}
+
+.banner-2 .image-area-right {
+    flex: 1.5;
+    background-color: #b0a59a; /* Cor placeholder da imagem */
+    background: url('/src/img/web2.jpg') no-repeat; /* Removi center center / cover */
+
+    /* ************************************************************* */
+    /* A CHAVE PARA NÃO CORTAR AS CABEÇAS: PRIORIZA O TOPO DA IMAGEM */
+    background-size: cover;
+    background-position: top center; /* <--- MUDANÇA AQUI */
+    /* ************************************************************* */
+}
+
+/* Faixa 3 */
+.banner-3 {
+    color: var(--cor-texto-claro);
+}
+
+.banner-3 .image-area-left.wide-image {
+    flex: 2.5;
+    background: url('/src/img/web3.jpg') no-repeat top center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Conteúdo do lado direito */
+.banner-3 .content-area-right {
+    flex: 2;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.banner-3 .title-sub {
+    font-size: 4em;
+    font-weight: 400;
+}
+
+/* Fundo claro de segurança */
+.gradient-light {
+    background: #01141b;
+}
+
+/* Degradê sobre a imagem */
+.banner-3 .image-area-left.wide-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Degradê suave e profissional, igual ao da imagem */
+    background: linear-gradient(
+        to right,
+        rgba(2, 16, 24, 0) 0%,            /* Transparente no início (esquerda) */
+        rgba(2, 16, 24, 0.25) 35%,        /* Transição leve */
+        rgba(2, 16, 24, 0.65) 65%,        /* Mais escuro */
+        #020e14 100%     /* Cor sólida no final (direita) */
+    );
+    opacity: 0.95;
+}
+
+/* Faixa 4: Lancement Soeurs */
+.banner-4 {
+    color: var(--cor-texto-escuro); /* Texto branco */
+    background-color: var(--cor-cinza-lancement); /* Cor sólida marrom do lado esquerdo */
+}
+
+.banner-4 .content-area-left {
+    flex: 2; /* Área maior para o texto e fundo marrom sólido */
+    align-items: flex-start;
+    padding-left: 40px;
+    background-color: transparent; /* A cor já está no container pai (.banner-4) */
+}
+
+/* Ajustes de tipografia */
+.banner-4 .title-sub {
+    font-size: 4em; /* Ajuste o tamanho da fonte para Lancement Soeurs (parece menor que o Signature) */
+    font-weight: 400; /* Parece mais leve na imagem */
+    line-height: 1;
+    text-transform: none; /* Não tem capitalize */
+}
+/* O "Lancement Soeurs" tem um estilo de fonte que lembra a fonte de cabeçalho (title-sub).
+   Se você quiser uma classe mais específica para o título:
+.banner-4 .title-lancement { 
+    font-size: 4.5em; 
+}
+*/
+.banner-4 .description-lancement {
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+
+.banner-4 .image-area-right.image-lancement {
+    flex: 1.5; /* Área menor para a imagem */
+    position: relative;
+    overflow: hidden;
+
+    /* APLICAÇÃO DA IMAGEM DE FUNDO */
+    background: url('/src/img/web4.jpg') no-repeat; 
+    background-size: cover;
+    background-position: top right; /* Prioriza o topo da imagem e a direita (onde estão as mãos) */
+}
+
+/* ************************************************************* */
+/* CRIAÇÃO DO DEGRADÊ (OVERLAY) SOBRE A IMAGEM NA DIREITA */
+/* O degradê vai do marrom escuro (esquerda) para transparente (direita) */
+.banner-4 .image-area-right.image-lancement::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* Degradê que vai da cor sólida (marrom do banner-4) para transparente */
+    background: linear-gradient(to right, 
+        var(--cor-cinza-lancement) 10%, 
+        rgba(86, 71, 63, 0.4) 30%, /* Ponto de transição */
+        transparent 90%);
+        
+    /* Opcional: para escurecer a imagem se ela for muito clara */
+    /* background: linear-gradient(to right, var(--cor-marrom-lancement) 10%, transparent 90%), 
+                  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)); */
+    
+    opacity: 1; /* A opacidade é controlada pelas cores RGBA no linear-gradient */
+}
+.banner-5 {
+    color: var(--cor-texto-claro);
+}
+
+.banner-5 .image-area-left.wide-image {
+    flex: 2.5;
+    background: url('/src/img/web5.jpg') no-repeat top center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Conteúdo do lado direito */
+.banner-5 .content-area-right {
+    flex: 2;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.banner-5 .title-sub {
+    font-size: 4em;
+    font-weight: 400;
+}
+
+/* Fundo claro de segurança */
+.gradient-light {
+    background: #01141b;
+}
+
+/* Degradê sobre a imagem */
+.banner-5 .image-area-left.wide-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Degradê suave e profissional, igual ao da imagem */
+    background: linear-gradient(
+        to right,
+        rgba(2, 16, 24, 0) 0%,            /* Transparente no início (esquerda) */
+        rgba(2, 16, 24, 0.25) 35%,        /* Transição leve */
+        rgba(2, 16, 24, 0.65) 65%,        /* Mais escuro */
+        #020e14 100%     /* Cor sólida no final (direita) */
+    );
+    opacity: 0.95;
+}
+
+
+
+@media (max-width: 1024px) {
+  .banner {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .banner .image-area,
+  .banner .content-area {
+    width: 100%;
+    flex: none;
+    padding: 40px 30px;
+  }
+
+  .banner .title-sub {
+    font-size: 3em;
+  }
+
+  .banner .title-main {
+    font-size: 2em;
+  }
+
+  .banner .description,
+  .banner .description-small {
+    font-size: 0.9em;
+  }
+
+  .banner-3 .image-area-left.wide-image::after,
+  .banner-5 .image-area-left.wide-image::after {
+    opacity: 0.75;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    background-position: center;
+    padding-top: 10vh;
+  }
+
+  .overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Banners empilhados verticalmente */
+  .banner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner .image-area,
+  .banner .content-area {
+    width: 100%;
+    flex: none;
+    padding: 30px 20px;
+  }
+
+  /* Centraliza texto */
+  .banner .content-area {
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Reduz títulos e espaçamentos */
+  .title-main {
+    font-size: 1.8rem;
+  }
+
+  .title-sub {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .description,
+  .description-small {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  /* Mantém visibilidade das imagens */
+  .image-area {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Remove sobreposição escura para deixar a imagem mais clara */
+  .banner-3 .image-area-left.wide-image::after,
+  .banner-5 .image-area-left.wide-image::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5)
+    );
+  }
+
+  /* Ajustes de tipografia para o banner 4 */
+  .banner-4 .title-sub {
+    font-size: 2.3rem;
+  }
+
+  /* Padding mais suave */
+  .banners-container {
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 480px) {
+  .title-sub {
+    font-size: 2rem;
+  }
+
+  .description,
+  .description-small {
+    font-size: 0.75rem;
+  }
+
+  .icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+}
